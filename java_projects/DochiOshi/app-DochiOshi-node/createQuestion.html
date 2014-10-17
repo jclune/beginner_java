@@ -1,0 +1,105 @@
+<!doctype html>
+<html class="no-js">
+	<head>
+		<meta charset="utf-8">
+		<title>DochiOshi Create Question</title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="shortcut icon" href="../images/icon.png">
+		<!-- bower:css -->
+		<link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css" />
+		<link rel="stylesheet" href="../bower_components/pure/pure.css" />
+		<!-- endbower -->
+		<link rel="stylesheet" href="styles/justin.css">
+	</head>
+	<body>
+		<div id="container">
+			<form action="qs CreateQuestion" class="qs createQuestion pure-form">
+				<div class="qsBox">
+					<div class="qsTitle">
+						<div class="clearfix">
+							<input type="button" class="back pure-button pure-button-primary button-small" onclick="history.back();" value="戻る">
+							<button type="submit" class="submit pure-button pure-button-primary button-small">submit</button>
+						</div>
+						<div>
+							<input type="text" class="title pure-input-rounded" placeholder="Title" />
+						</div>
+					</div>
+					<div class="qsAB clearfix">
+						<div class="qsABobj">
+							<img src="" alt="" class="ABimg flickr">
+							<div class="content"><input type="text" class="pure-input-rounded" placeholder="Description" /></div>
+						</div>
+						<div class="qsABobj">
+							<img src="" alt="" class="ABimg flickr">
+							<div class="content"><input type="text" class="pure-input-rounded" placeholder="Description" /></div>
+						</div>
+					</div>
+					<div class="accordion accordionCss">
+						<h3>
+							<a href="#">
+								<span>1カテゴリ選択</span>
+							</a>
+						</h3>
+						<div class="qsAccordion category clearfix">
+							<div class="pure-button button-small categoryButton">
+								<input type="radio" class="categoryCheck" name="fashion"/>
+								<span>Fashion</span>
+							</div>
+							<div class="pure-button button-small categoryButton">
+								<input type="radio" class="categoryCheck" name="food"/>
+								<span>Food</span>
+							</div><div class="pure-button button-small categoryButton">
+								<input type="radio" class="categoryCheck" name="anime"/>
+								<span>Anime</span>
+							</div><div class="pure-button button-small categoryButton">
+								<input type="radio" class="categoryCheck" name="manga"/>
+								<span>Manga</span>
+							</div><div class="pure-button button-small categoryButton">
+								<input type="radio" class="categoryCheck" name="activities"/>
+								<span>Activities</span>
+							</div><div class="pure-button button-small categoryButton">
+								<input type="radio" class="categoryCheck" name="random"/>
+								<span>Random</span>
+							</div>
+						</div>
+						<h3>
+							<a href="#">
+ 								<span>説明 (50 characters)</span>							
+							</a>
+						</h3>
+						<div class="qsAccordion clearfix">
+							<div>
+								<textarea name="textarea" class="description" rows="3" placeholder="説明" value=""></textarea>
+							</div>
+							<div class="qsDropDowns">
+								<div class="clearfix">
+									<span>締め切り</span>
+									<input type="date" id="deadline" class="pure-input-rounded" >
+								</div>
+								<div class="clearfix privacy">
+									<span>誰と共有する</span>
+									<select id="privacy" class="pure-input-rounded" >
+										<option value="public">public</option>
+										<option value="followers">followers</option>
+									</select>
+								</div>
+							</div>
+							<div class="clearfix">
+								<button type="submit" class="bigSubmit pure-button pure-button-primary">submit :)</button>
+							</div>
+						</div>
+					</div> <!-- accordion -->
+				</div> <!-- box -->
+			</form> 
+		</div>
+		<!-- bower:js -->
+		<script src="../bower_components/jquery/jquery.js"></script>
+		<script src="../bower_components/modernizr/modernizr.js"></script>
+		<script src="../bower_components/bootstrap/dist/js/bootstrap.js"></script>
+		<script src="../bower_components/jquery.easing/js/jquery.easing.min.js"></script>
+		<script src="../bower_components/jquery-ui/ui/jquery-ui.js"></script>
+		<!-- endbower -->
+		<script src="scripts/justin.js"></script>
+	</body>
+</html>

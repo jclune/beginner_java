@@ -1,0 +1,184 @@
+<!-- 
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<!DOCTYPE html>
+<html>
+-->
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>DochiOshi Feed</title>
+<meta name="description" content="DochiOshi Feed">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--
+<link rel="shortcut icon"
+	href="${pageContext.request.contextPath}/resources/app/images/icon.png">
+<!-- bower:css -->
+<!-- endbower -->
+<!--
+<link rel="stylesheet"
+	href="${pageContext.request.contextPath}/resources/app/styles/justin.css"
+	type="text/css">
+-->
+<link rel="shortcut icon" href="../images/icon.png">
+<!-- bower:css -->
+<link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css" />
+<link rel="stylesheet" href="../bower_components/pure/pure.css" />
+<!-- endbower -->
+<link rel="stylesheet" href="styles/justin.css">
+</head>
+
+<body>
+	<div id="box">
+		<div>
+			<!--<%@ include file="/WEB-INF/views/header.jsp" %>-->
+			<c:forEach var="obj" items="${questions}">
+				<div class="qsBox">
+					<div class="qsTitle clearfix">
+						<div class="qsTitleLeft clearfix">
+							<!-- <img
+							src="${pageContext.request.contextPath}/resources/app/images/icon.png"
+							alt="" class="qsProfileImg"> -->
+							<img src="../images/post/Q_zatsudan.png" alt="" class="qsProfileImg">
+							<span class="vertAlignHelper"></span>
+							<!-- <span><c:out value="${obj.title}" />title</span> -->
+							<span class="objTitle"><!-- <c:out value="${obj.title}" /> -->どちらが好きですか？</h1>
+							</span>
+						</div>
+						<div class="qsTitleRight">
+							<span>時間：1時間<br>答え：28
+							</span>
+						</div>
+					</div>
+					<div class="qsTitleLine">
+						<img class="line" src="../images/icons/line.png" alt=""/>
+					</div>
+					<div class="qsHead clearfix">
+						<div class="qsHeadLeft">
+							<span><!-- <c:out value="${obj.content}" /> -->
+								Puedas hablar en espanol? Vamos ir a la fiesta? Me gustas mejores sucias.
+								</span>
+						</div>
+						<div class="qsHeadRight">
+							<div class="qsProfile clearfix">
+								<div style="min-height: 30px;">
+									<img src="" alt="" class="qsProfileImg flickr">
+								</div>
+								<span>ジャスティン<br>@justin
+								</span>
+							</div>
+						</div>
+					</div>
+					<div class="qsAB clearfix">
+						<c:forEach var="obj2" items="${obj.choise}">
+							<div class="qsABobj">
+								<div class="topTexture A">
+								</div>
+								<div class="content">
+									<span><!-- <c:out value="${obj2.content}" /> -->Puppy A</span>
+								</div>								
+								<div style="min-height: 138px;">
+									<!-- <img src="" alt="" class="ABimg flickr"> <img
+										src="${pageContext.request.contextPath}/resources/app/images/stamp.png"
+										alt="" class="stamp" style="display: none;"> -->
+									<img src="" alt="" class="ABimg flickr">
+									<img
+										src="../images/feed/kocchiStamp.png"
+										alt="" class="stamp" style="display: none;">
+									<div class="kochi"></div>
+								</div>
+							</div>
+						</c:forEach>
+						<div class="qsABobj">
+							<div class="topTexture B">
+							</div>
+							<div class="content">
+								<span><!-- <c:out value="${obj2.content}" /> -->Puppy B</span>
+							</div>
+							<div style="min-height: 138px;">
+								<!-- <img src="" alt="" class="ABimg flickr"> <img
+									src="${pageContext.request.contextPath}/resources/app/images/stamp.png"
+									alt="" class="stamp" style="display: none;"> -->
+								<img src="" alt="" class="ABimg flickr">
+								<img
+									src="../images/feed/kocchiStamp.png"
+									alt="" class="stamp" style="display: none;">
+								<div class="kochi"></div>
+							</div>
+						</div>
+					</div>
+					<div class="vs">
+					</div>
+					<div class="accordionCol accordionColCss">
+						<h3>
+							<a href="#"> <span>もっと見る</span> <span class="qsCommentMore">
+								<span
+									class="glyphicon glyphicon-comment"></span> 5  コメント</span>
+							</a>
+						</h3>
+						<div class="qsAccordion">
+							<div class="qsVote">
+								<div class="qsVoteFill"></div>
+								<span>70%</span>
+							</div>
+							<ul class="qsComments">
+								<li class="qsComment clearfix">
+									<div style="min-height: 30px;">
+										<img src="" alt="" class="qsProfileImg flickr">
+									</div> <span class="qsCommentAuthor"><a>Haru</a></span> <span>www
+										笑い</span>
+								</li>
+								<li class="qsComment clearfix">
+									<div style="min-height: 30px;">
+										<img src="" alt="" class="qsProfileImg flickr">
+									</div> <span class="qsCommentAuthor"><a>Haru</a></span> <span>www
+										笑い</span>
+								</li>
+								<li class="qsComment  clearfix">
+									<div style="min-height: 30px;">
+										<img src="" alt="" class="qsProfileImg flickr">
+									</div> <span class="qsCommentAuthor"><a>Haru</a></span> <span>www
+										笑い</span>
+								</li>
+								<li class="qsComment  clearfix">
+									<div style="min-height: 30px;">
+										<img src="" alt="" class="qsProfileImg flickr">
+									</div> <span class="qsCommentAuthor"><a>Haru</a></span> <span>www
+										笑い</span>
+								</li>
+								<li class="qsComment  clearfix">
+									<div style="min-height: 30px;">
+										<img src="" alt="" class="qsProfileImg flickr">
+									</div> <span class="qsCommentAuthor"><a>Haru</a></span> <span>www
+										笑い</span>
+								</li>
+							</ul>
+							<div class="qsAddComment clearfix">
+								<input type="text" class="comment pure-input-rounded"
+									placeholder="Type here">
+								<input type="button" value="コメント" class="addComment pure-button pure-button-primary"/>
+								<!-- <input type="button" value="testAddComment" class="addComment testAddComment pure-button pure-button-primary"/> -->
+							</div>
+						</div>
+					</div>
+				</div>
+			</c:forEach>
+		</div>
+	</div>
+	<!-- bower:js -->
+	<script src="../bower_components/jquery/jquery.js"></script>
+	<script src="../bower_components/modernizr/modernizr.js"></script>
+	<script src="../bower_components/bootstrap/dist/js/bootstrap.js"></script>
+	<script src="../bower_components/jquery.easing/js/jquery.easing.min.js"></script>
+	<script src="../bower_components/jquery-ui/ui/jquery-ui.js"></script>
+	<!-- endbower -->
+	<script src="scripts/justin.js"></script>
+	<!-- bower:js -->
+	<!-- endbower -->
+	<!--
+	<script
+		src="${pageContext.request.contextPath}/resources/app/scripts/justin.js"></script>
+	-->
+</body>
+</html>
